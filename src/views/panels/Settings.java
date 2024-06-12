@@ -35,6 +35,10 @@ public class Settings extends JPanel {
      */
     private JButton btnNewGame;
     /**
+     * Hetkene valitud faili label
+     */
+    private JLabel lblFile;
+    /**
      * TODO Selle nupu vajalikkus on küsimärgi all :)
      * Suunab vahelehele Edetabel
      */
@@ -85,20 +89,32 @@ public class Settings extends JPanel {
         components.add(lblCategory, gbc);
 
         // TODO muuta JComboBox sulgude sisu
-        cmbCategory = new JComboBox<>(new String[]{model.getChooseCategory()}); // Teksti massiiv ühe elemendiga
+        // cmbCategory = new JComboBox<>(new String[]{model.getChooseCategory()}); // Teksti massiiv ühe elemendiga
+        cmbCategory = new JComboBox<>(model.getCmbCategories()); // Teksti massiiv kõikide elementidega
         gbc.gridx = 1;
         gbc.gridy = 1;
+
         components.add(cmbCategory, gbc);
+
+        // Jlabel näitab mis failis oleme
+        lblFile = new JLabel(model.getDatabaseFile(), JLabel.CENTER);  // Näitab mis fail on valitud
+        lblFile.setForeground(Color.RED);
+        lblFile.setFont(new Font("Verdana", Font.BOLD, 14));
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        gbc.gridwidth = 2;
+        components.add(lblFile, gbc);
 
         // Kolmas rida kaks nuppu kõrvuti. Teine nupp küsitav :)
         btnNewGame = new JButton("Uus mäng");
         gbc.gridx = 0;
-        gbc.gridy = 2;
+        gbc.gridy = 3;
+        gbc.gridwidth = 1;
         components.add(btnNewGame, gbc);
 
         btnLeaderboard = new JButton("Edetabel");
         gbc.gridx = 1;
-        gbc.gridy = 2;
+        gbc.gridy = 3;
         components.add(btnLeaderboard, gbc);
 
     }
