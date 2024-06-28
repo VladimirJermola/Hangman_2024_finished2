@@ -21,6 +21,11 @@ public class Model {
      */
     private String databaseFile = "hangman_words_ee_test.db";
 
+    private String word = "";
+    private String guessed_word = "";
+    private int mistakes = 0;
+    private final ArrayList<String> wrongLetters = new ArrayList<>();
+
     private String selectedCategory; // Vaikimisi valitud kategooria
     private String[] cmbCategories;  // Rippmenüü sisu
 
@@ -41,6 +46,10 @@ public class Model {
      */
     private List<DataScore> dataScores = new ArrayList<>();
 
+
+
+    private String randomWord = "";
+
     public Model(String dbName) {
         if (dbName != null) {
             this.databaseFile = dbName; // Käsurealy saadud andmebaas kasutusel
@@ -59,8 +68,52 @@ public class Model {
             imageFiles.add(file.getAbsolutePath()); // Täispikk kausta tee
         }
         Collections.sort(imageFiles); // Sorteerida kasvavalt kasuta sisu
-       System.out.println(imageFiles);
+       //System.out.println(imageFiles);
     }
+    public void setWord(String word) {
+        this.word = word;
+    }
+    public String getWord() {
+        return word;
+    }
+    /**
+     * Rippmenüü esimene valik enne kategooriaid
+     * @return teksti "Kõik kategooriad"
+     */
+
+    public String getGuessedWord() { return guessed_word; }
+    public void setGuessedWord(String guessedWord) { this.guessed_word = guessedWord; }
+
+    public void updateGuessedWord(String character) {
+
+        List<Character> wordToList = new ArrayList<>();
+        for (char c : this.word.toCharArray()) {
+            wordToList.add(c);
+        }
+
+        List<Character> guessedWordToList = new ArrayList<>();
+        for (char c : this.guessed_word.toCharArray()) {
+            guessedWordToList.add(c);
+        }
+
+        for (int i = 0; i < wordToList.size(); i++) {
+            if (character.charAt(0) == wordToList.get(i)) {
+                guessedWordToList.set(i, character.charAt(0));
+            }
+        }
+
+        StringBuilder sb = new StringBuilder();
+        for (char c : guessedWordToList) {
+            sb.append(c);
+        }
+        this.guessed_word = sb.toString();
+    }
+
+    public int getMistakes () { return this.mistakes; }
+    public void setMistakes (int mistakes) { this.mistakes = mistakes; }
+    public void addLetter(String character) { this.wrongLetters.add(character); }
+    public void clearLetters() { this.wrongLetters.clear(); }
+    public ArrayList<String> getWrongLetters () { return this.wrongLetters; }
 
     /**
      * Rippmenüü esimene valik enne kategooriaid
@@ -160,6 +213,14 @@ public class Model {
 
     public void setDataScores(List<DataScore> dataScores) {
         this.dataScores = dataScores;
+    }
+
+    public String getRandomWord() {
+        return randomWord;
+    }
+
+    public void setRandomWord(String randomWord) {
+        this.randomWord = randomWord;
     }
 }
 

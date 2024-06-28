@@ -12,6 +12,7 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 /**
  * See on põhivaade ehk JFrame kuhu peale pannakse kõik muud JComponendid mida on mänguks vaja.
@@ -52,7 +53,7 @@ public class View extends JFrame {
         setTitle("Poomismäng 2024 õpilased"); // JFrame titelriba tekst
         setPreferredSize(new Dimension(500, 250));
         // TODO arenduse lõpus keela akna suurendamine
-        // setResizable(false);
+        setResizable(false);
         getContentPane().setBackground(new Color(250,210,205)); // JFrame taustavärv (rõõsa)
 
         // Loome kolm vahelehte (JPanel)
@@ -81,7 +82,7 @@ public class View extends JFrame {
 
         // TODO arenduse lõpus mängulaua vahelehte klikkida ei saa
 
-        // tabbedPane.setEnabledAt(1, false); // Vahelehte mängulaud ei saa klikkida
+         tabbedPane.setEnabledAt(1, false); // Vahelehte mängulaud ei saa klikkida
     }
 
     /**
@@ -135,6 +136,8 @@ public class View extends JFrame {
 
     }
 
+    public RealTimer getRealTimer() { return realTimer; }
+
     public void updateScoresTable() {
         for(DataScore ds : model.getDataScores()) {
             String gameTime = ds.gameTime().format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss"));
@@ -157,5 +160,41 @@ public class View extends JFrame {
         int min = seconds / 60;
         int sec = seconds % 60;
         return String.format("%02d:%02d", min, sec);
+    }
+
+    public String formatGuessedWord(String word) {
+        StringBuilder spacedWord = new StringBuilder();
+
+        for (int i = 0; i < word.length(); i++) {
+            spacedWord.append(word.charAt(i));
+            if (i < word.length() - 1) {
+                spacedWord.append(" ");
+            }
+        }
+
+        return spacedWord.toString();
+    }
+
+    public void updateLblResult(String character) {
+        if (character == null) {
+            StringBuilder hiddenWord = new StringBuilder();
+            hiddenWord.append("_".repeat(model.getWord().length()));
+            model.setGuessedWord(hiddenWord.toString());
+            gameBoard.getLblResult().setText(formatGuessedWord(hiddenWord.toString()));
+        } else {
+            model.updateGuessedWord(character);
+            gameBoard.getLblResult().setText(formatGuessedWord(model.getGuessedWord()));
+        }
+    }
+
+    public void updateLblImage(int mistakes) {
+        List<String> imageIcons = model.getImageFiles();
+
+        if (mistakes >= 0 && mistakes < imageIcons.size()) {
+            ImageIcon newIcon = new ImageIcon(imageIcons.get(mistakes));
+            gameBoard.getLblImage().setIcon(newIcon);
+        } else {
+            gameBoard.getLblImage().setIcon(new ImageIcon());
+        }
     }
 }

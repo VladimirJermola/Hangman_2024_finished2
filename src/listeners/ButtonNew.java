@@ -1,5 +1,6 @@
 package listeners;
 
+import models.Database;
 import models.Model;
 import views.View;
 
@@ -30,5 +31,8 @@ public class ButtonNew implements ActionListener {
 
         }
         // TODO Siit jätkub õpilaste arendus
+        String category = model.getSelectedCategory();
+        new Database(model).setWordByCategory(category);
+        view.updateLblResult(null);
     }
 }
