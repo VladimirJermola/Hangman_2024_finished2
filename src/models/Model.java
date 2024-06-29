@@ -46,10 +46,6 @@ public class Model {
      */
     private List<DataScore> dataScores = new ArrayList<>();
 
-
-
-    private String randomWord = "";
-
     public Model(String dbName) {
         if (dbName != null) {
             this.databaseFile = dbName; // Käsurealy saadud andmebaas kasutusel
@@ -215,13 +211,6 @@ public class Model {
         this.dataScores = dataScores;
     }
 
-    public String getRandomWord() {
-        return randomWord;
-    }
-
-    public void setRandomWord(String randomWord) {
-        this.randomWord = randomWord;
-    }
 }
 
 

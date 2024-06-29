@@ -9,9 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3a9a89e-df2f-41b6-935e-2b222c675b42" name="Changes" comment="Tunnis tehtud muudatused">
+    <list default="true" id="c3a9a89e-df2f-41b6-935e-2b222c675b42" name="Changes" comment="Last muudatused">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hangman_words_ee_test.db" beforeDir="false" afterPath="$PROJECT_DIR$/hangman_words_ee_test.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Model.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +133,9 @@
       <workItem from="1719589057787" duration="565000" />
       <workItem from="1719589872609" duration="271000" />
       <workItem from="1719590949927" duration="242000" />
+      <workItem from="1719591203837" duration="67000" />
+      <workItem from="1719591284228" duration="4101000" />
+      <workItem from="1719664355374" duration="381000" />
     </task>
     <task id="LOCAL−00001" summary="First Commit">
       <option name="closed" value="true" />
@@ -169,7 +172,14 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1719589204390</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="Last muudatused">
+      <option name="closed" value="true" />
+      <created>1719591239861</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1719591239861</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +229,7 @@
     <MESSAGE value="README.md õigesse kohta" />
     <MESSAGE value="Muudetud mudelit, README, Settings Database ja listud ComboboxChange." />
     <MESSAGE value="Tunnis tehtud muudatused" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tunnis tehtud muudatused" />
+    <MESSAGE value="Last muudatused" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last muudatused" />
   </component>
 </project>
