@@ -43,8 +43,10 @@ public class View extends JFrame {
     // TODO RealTimer ka
     private GameTimer gameTimer;
     private RealTimer realTimer;
+
     /**
      * View konstruktor. Põhiakna (JFrame) loomine ja sinna paneelide (JPanel) lisamine ja JComponendid
+     *
      * @param model mudel mis loodi MainApp-is
      */
     public View(Model model) {
@@ -54,7 +56,7 @@ public class View extends JFrame {
         setPreferredSize(new Dimension(500, 250));
         // TODO arenduse lõpus keela akna suurendamine
         setResizable(false);
-        getContentPane().setBackground(new Color(250,210,205)); // JFrame taustavärv (rõõsa)
+        getContentPane().setBackground(new Color(250, 210, 205)); // JFrame taustavärv (rõõsa)
 
         // Loome kolm vahelehte (JPanel)
         settings = new Settings(model);
@@ -82,7 +84,7 @@ public class View extends JFrame {
 
         // TODO arenduse lõpus mängulaua vahelehte klikkida ei saa
 
-         tabbedPane.setEnabledAt(1, false); // Vahelehte mängulaud ei saa klikkida
+        tabbedPane.setEnabledAt(1, false); // Vahelehte mängulaud ei saa klikkida
     }
 
     /**
@@ -129,6 +131,7 @@ public class View extends JFrame {
 
     /**
      * Mänguaja objekt .stop() .setRunning() jne.
+     *
      * @return mänguaja objekti-
      */
     public GameTimer getGameTimer() {
@@ -136,10 +139,12 @@ public class View extends JFrame {
 
     }
 
-    public RealTimer getRealTimer() { return realTimer; }
+    public RealTimer getRealTimer() {
+        return realTimer;
+    }
 
     public void updateScoresTable() {
-        for(DataScore ds : model.getDataScores()) {
+        for (DataScore ds : model.getDataScores()) {
             String gameTime = ds.gameTime().format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss"));
             String name = ds.playerName();
             String word = ds.word();
@@ -153,6 +158,7 @@ public class View extends JFrame {
 
     /**
      * Muudab aja min on sekundites jukule mm:ss 90 sek on 01:30
+     *
      * @param seconds sekundite, täisarv
      * @return vormindatud string
      */

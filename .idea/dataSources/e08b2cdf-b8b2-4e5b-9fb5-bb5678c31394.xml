@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="hangman_words_ee">
-  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.52">
+  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.53">
     <root id="1">
       <ServerVersion>3.45.1</ServerVersion>
     </root>
@@ -1600,32 +1600,32 @@
     <table id="558" parent="191" name="words"/>
     <column id="559" parent="555" name="id">
       <AutoIncrement>1</AutoIncrement>
-      <DasType>INTEGER|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
+      <StoredType>INTEGER|0s</StoredType>
     </column>
     <column id="560" parent="555" name="playertime">
-      <DasType>TEXT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="561" parent="555" name="playername">
-      <DasType>TEXT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="562" parent="555" name="guessword">
-      <DasType>TEXT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="563" parent="555" name="wrongcharacters">
-      <DasType>TEXT|0s</DasType>
       <Position>5</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="564" parent="555" name="gametime">
-      <DasType>INTEGER|0s</DasType>
       <Position>6</Position>
+      <StoredType>INTEGER|0s</StoredType>
     </column>
     <index id="565" parent="555" name="sqlite_autoindex_scores_1">
       <ColNames>id</ColNames>
@@ -1642,24 +1642,24 @@
       <UnderlyingIndexName>sqlite_autoindex_scores_1</UnderlyingIndexName>
     </key>
     <column id="568" parent="556" name="type">
-      <DasType>TEXT|0s</DasType>
       <Position>1</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="569" parent="556" name="name">
-      <DasType>TEXT|0s</DasType>
       <Position>2</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="570" parent="556" name="tbl_name">
-      <DasType>TEXT|0s</DasType>
       <Position>3</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="571" parent="556" name="rootpage">
-      <DasType>INT|0s</DasType>
       <Position>4</Position>
+      <StoredType>INT|0s</StoredType>
     </column>
     <column id="572" parent="556" name="sql">
-      <DasType>TEXT|0s</DasType>
       <Position>5</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="573" parent="557" name="name">
       <Position>1</Position>
@@ -1669,19 +1669,19 @@
     </column>
     <column id="575" parent="558" name="id">
       <AutoIncrement>1</AutoIncrement>
-      <DasType>INTEGER|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
+      <StoredType>INTEGER|0s</StoredType>
     </column>
     <column id="576" parent="558" name="word">
-      <DasType>TEXT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="577" parent="558" name="category">
-      <DasType>TEXT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <index id="578" parent="558" name="sqlite_autoindex_words_1">
       <ColNames>id</ColNames>

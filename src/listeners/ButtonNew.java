@@ -33,6 +33,7 @@ public class ButtonNew implements ActionListener {
         // TODO Siit jätkub õpilaste arendus
         String category = model.getSelectedCategory();
         new Database(model).setWordByCategory(category);
+        view.updateLblImage(0);
         view.updateLblResult(null);
     }
 }
