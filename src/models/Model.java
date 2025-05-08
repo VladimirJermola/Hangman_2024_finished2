@@ -108,7 +108,10 @@ public class Model {
     public int getMistakes () { return this.mistakes; }
     public void setMistakes (int mistakes) { this.mistakes = mistakes; }
     public void addLetter(String character) { this.wrongLetters.add(character); }
-    public void clearLetters() { this.wrongLetters.clear(); }
+    public void clearLetters() {
+        this.wrongLetters.clear();
+        //System.out.println("Clear letters: " + this.wrongLetters + "\n");
+    }
     public ArrayList<String> getWrongLetters () { return this.wrongLetters; }
 
     /**

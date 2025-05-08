@@ -9,15 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3a9a89e-df2f-41b6-935e-2b222c675b42" name="Changes" comment="Last muudatused">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0c6fc240-3c2a-43de-95ba-22e8783d0fb5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0c6fc240-3c2a-43de-95ba-22e8783d0fb5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e08b2cdf-b8b2-4e5b-9fb5-bb5678c31394.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e08b2cdf-b8b2-4e5b-9fb5-bb5678c31394.xml" afterDir="false" />
+    <list default="true" id="c3a9a89e-df2f-41b6-935e-2b222c675b42" name="Changes" comment="Last muudatused version2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hangman_words_ee_test.db" beforeDir="false" afterPath="$PROJECT_DIR$/hangman_words_ee_test.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/TextFieldLimit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/TextFieldLimit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/listeners/ButtonCancel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/listeners/ButtonCancel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/listeners/ButtonNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/listeners/ButtonNew.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Model.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +34,11 @@
         <option value="Ralf &lt;thunderleftnow@gmail.com&gt;" />
         <option value="https://github.com/VladimirJermola/Hangman_2024_finished" />
       </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -71,7 +72,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;version2&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
@@ -160,6 +161,9 @@
       <workItem from="1746094368576" duration="151000" />
       <workItem from="1746632438362" duration="811000" />
       <workItem from="1746722381035" duration="668000" />
+      <workItem from="1746723076829" duration="414000" />
+      <workItem from="1746729123111" duration="2500000" />
+      <workItem from="1746731688494" duration="2017000" />
     </task>
     <task id="LOCAL−00001" summary="First Commit">
       <option name="closed" value="true" />
@@ -210,7 +214,14 @@
       <option name="presentableId" value="LOCAL−00007" />
       <updated>1719664806539</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL−00008" summary="Last muudatused version2">
+      <option name="closed" value="true" />
+      <created>1746723393200</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1746723393200</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,6 +295,7 @@
     <MESSAGE value="Muudetud mudelit, README, Settings Database ja listud ComboboxChange." />
     <MESSAGE value="Tunnis tehtud muudatused" />
     <MESSAGE value="Last muudatused" />
-    <option name="LAST_COMMIT_MESSAGE" value="Last muudatused" />
+    <MESSAGE value="Last muudatused version2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last muudatused version2" />
   </component>
 </project>

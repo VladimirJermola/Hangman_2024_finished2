@@ -35,5 +35,8 @@ public class ButtonNew implements ActionListener {
         new Database(model).setWordByCategory(category);
         view.updateLblImage(0);
         view.updateLblResult(null);
+        model.setMistakes(0);
+        model.clearLetters();
+        view.getGameBoard().getLblError().setText("Vigased tähed: ");
     }
 }
